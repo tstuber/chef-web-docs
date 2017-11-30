@@ -36,13 +36,13 @@ Reaper has a number of configuration parameters you may specify in your ``/etc/d
   If ``true`` Reaper will be enabled and run every 15 minutes. Default: ``false``.
 
 ``reaper['mode']``: string
-  This setting is **required** if ``reaper['enable']`` is set to ``true``. Valid options are ``'delete'`` or ``'archive'``. 
+  This setting is **required** if ``reaper['enable']`` is set to ``true``. Valid options are ``'delete'`` or ``'archive'``.
 
 ``reaper['mode']``: ``'delete'``
   Reaper will delete any indices older than the value specified in ``reaper['retention_period_in_days']``.
 
 ``reaper['mode']``: ``'archive'``
-  Reaper will take snapshots of any indices older than defined in ``reaper['eetention_period_in_days']`` and then delete the indices.
+  Reaper will take snapshots of any indices older than defined in ``reaper['retention_period_in_days']`` and then delete the indices.
 
 ``reaper['archive_destination']``: string
   This setting is **required** if ``reaper['mode']`` is set to ``'archive'``. Valid options are ``'fs'`` or ``'s3'``.
@@ -58,10 +58,10 @@ Reaper has a number of configuration parameters you may specify in your ``/etc/d
 
 ``reaper['evasive_maneuvers_enabled']``: boolean
     If ``true``, Reaper will perform evasive maneuvers if they are necessary. The default setting depends on the Elasticsearch service in use.
-    Default: ``true`` if using Chef Automate's provided Elasticsearch service. 
+    Default: ``true`` if using Chef Automate's provided Elasticsearch service.
     Default: ``false`` if using an external Elasticsearch service.
 
-``reaper['free_space_threshold_percent']``: integer 
+``reaper['free_space_threshold_percent']``: integer
   The threshold for free space on any volume on any Elasticsearch node in your cluster. If the free space falls below this threshold, Reaper will perform evasive maneuvers. Default: ``10``.
 
 ``reaper[‘repository’]``: string
