@@ -42,13 +42,19 @@ Reaper has a number of configuration parameters you may specify in your ``/etc/d
   Reaper will delete any indices older than the value specified in ``reaper['retention_period_in_days']``.
 
 ``reaper['mode']``: ``'archive'``
-  Reaper will take snapshots of any indices older than defined in ``reaper['retention_period_in_days']`` and then delete the indices.
+  Reaper will take snapshots of any indices older than defined in ``reaper['eetention_period_in_days']`` and then delete the indices.
 
 ``reaper['archive_destination']``: string
   This setting is **required** if ``reaper['mode']`` is set to ``'archive'``. Valid options are ``'fs'`` or ``'s3'``.
 
 ``reaper['retention_period_in_days']``: integer
   Any indices older than this value will reaped by Reaper. Default: ``14``.
+
+``reaper['compliance_retention_period_in_days']``: integer
+  Sets a retention period specifically for compliance data. Defaults to the value of ``reaper['retention_period_in_days']``.
+
+``reaper['insights_retention_period_in_days']``: integer
+  Sets a` retention period specifically for node data. Defaults to the value of ``reaper['retention_period_in_days']``.`
 
 ``reaper['evasive_maneuvers_enabled']``: boolean
     If ``true``, Reaper will perform evasive maneuvers if they are necessary. The default setting depends on the Elasticsearch service in use.
