@@ -54,7 +54,7 @@ Reaper has a number of configuration parameters you may specify in your ``/etc/d
   Sets a retention period specifically for compliance data. Defaults to the value of ``reaper['retention_period_in_days']``.
 
 ``reaper['insights_retention_period_in_days']``: integer
-  Sets a` retention period specifically for node data. Defaults to the value of ``reaper['retention_period_in_days']``.`
+  Sets a retention period specifically for node data. Defaults to the value of ``reaper['retention_period_in_days']``.
 
 ``reaper['evasive_maneuvers_enabled']``: boolean
     If ``true``, Reaper will perform evasive maneuvers if they are necessary. The default setting depends on the Elasticsearch service in use.
@@ -191,4 +191,3 @@ If both the workflow API and Elasticsearch are running locally, reaper can be in
   ruby /opt/delivery/embedded/service/reaper/bin/reaper \
   --config /var/opt/delivery/reaper/reaper_config.json \
   --log-file /var/log/delivery/reaper/reaper.log
-
